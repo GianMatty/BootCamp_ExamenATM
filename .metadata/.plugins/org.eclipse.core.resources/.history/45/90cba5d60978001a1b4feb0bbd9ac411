@@ -1,0 +1,5 @@
+package com.matias.microservicios.models.entity;
+
+public class Person {
+
+}

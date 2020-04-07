@@ -1,0 +1,26 @@
+package com.matias.microservicios.common.models.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "tbl_account")
+public class Account {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String accountNumber;
+	private double amount;
+	
+	public Account(String accountNumber, double amount) {
+		this.accountNumber = accountNumber;
+		this.amount = amount;
+	}
+}

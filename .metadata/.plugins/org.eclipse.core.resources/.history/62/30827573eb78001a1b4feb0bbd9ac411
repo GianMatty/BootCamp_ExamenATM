@@ -1,0 +1,5 @@
+package com.matias.microservicio.atmdeposit.services;
+
+public interface AtmRetrofit {
+
+}

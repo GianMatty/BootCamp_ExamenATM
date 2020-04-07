@@ -1,0 +1,22 @@
+package com.matias.microservicio.account.services;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.matias.microservicio.account.models.repository.PersonRepository;
+import com.matias.microservicios.common.models.entity.Person;
+
+@Service
+public class PersonServiceImpl implements PersonService{
+
+	@Autowired
+	private PersonRepository personRepository;
+	
+	@Override
+	public Optional<Person> findById(Long id) {
+		return personRepository.findById(id);
+	}
+	
+}

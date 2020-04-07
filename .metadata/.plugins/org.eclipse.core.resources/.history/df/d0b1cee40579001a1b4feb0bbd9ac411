@@ -1,0 +1,31 @@
+package com.matias.microservicios.common.models.entity;
+
+import java.util.List;
+
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "tbl_atmdeposit")
+public class ATMDeposit {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String documentNumber;
+	private String fingerprintEntityName;
+	//private boolean fingerprintEntityName;
+	@ElementCollection
+	private List<Account> validAccounts;
+	private double customerAmount;
+	
+	public ATMDeposit() {}
+	
+}

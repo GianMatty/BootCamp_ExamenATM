@@ -1,0 +1,5 @@
+package com.matias.microservicio.account.models.repository;
+
+public interface PersonRepository {
+
+}

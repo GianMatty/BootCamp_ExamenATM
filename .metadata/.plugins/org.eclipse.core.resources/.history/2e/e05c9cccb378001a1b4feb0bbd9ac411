@@ -1,0 +1,13 @@
+package com.matias.microservicio.person.models.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+
+import com.matias.microservicios.common.models.entity.Person;
+
+public interface PersonRepository extends CrudRepository<Person, Long> {
+	
+	public List<Person> FindByDocument(String document);
+}

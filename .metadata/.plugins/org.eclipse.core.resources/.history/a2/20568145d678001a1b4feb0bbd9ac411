@@ -1,0 +1,5 @@
+package com.matias.microservicio.account.controllers;
+
+public class AccountController {
+
+}

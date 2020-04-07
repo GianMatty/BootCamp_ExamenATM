@@ -1,0 +1,5 @@
+package com.matias.microservicio.fingerprint.services;
+
+public class fingerprintServiceImpl {
+
+}

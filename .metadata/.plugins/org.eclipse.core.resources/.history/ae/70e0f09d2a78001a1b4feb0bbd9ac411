@@ -1,0 +1,13 @@
+package com.matias.microservicio.person;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MicroservicioPersonApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MicroservicioPersonApplication.class, args);
+	}
+
+}

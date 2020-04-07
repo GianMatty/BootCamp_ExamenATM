@@ -1,0 +1,5 @@
+package com.matias.microservicios.common.models.entity;
+
+public class Fingerprint {
+
+}

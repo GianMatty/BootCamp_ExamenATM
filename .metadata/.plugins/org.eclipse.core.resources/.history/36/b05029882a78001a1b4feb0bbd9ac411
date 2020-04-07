@@ -1,0 +1,8 @@
+package com.matias.microservicio.account.services;
+
+import com.matias.microservicios.common.models.entity.Person;
+
+public interface PersonService {
+
+	public Iterable<Person> findPersons();
+}

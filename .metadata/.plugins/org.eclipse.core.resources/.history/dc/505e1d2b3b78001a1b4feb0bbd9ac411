@@ -1,0 +1,5 @@
+package com.matias.microservicio.reniec.controllers;
+
+public class ReniecController {
+
+}

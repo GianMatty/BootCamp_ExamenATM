@@ -1,0 +1,12 @@
+package com.matias.microservicios.common.models.entity;
+
+public class Card {
+	
+	private String cardNumber;
+	private boolean active;
+	
+	public Card(String cardNumber, boolean active) {
+		this.cardNumber = cardNumber;
+		this.active = active;
+	}
+}

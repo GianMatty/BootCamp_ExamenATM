@@ -1,0 +1,5 @@
+package com.matias.microservicio.card.services;
+
+public interface CardService {
+
+}

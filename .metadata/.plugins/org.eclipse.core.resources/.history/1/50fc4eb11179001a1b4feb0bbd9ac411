@@ -1,0 +1,29 @@
+package com.matias.microservicio.atmdeposit.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.matias.microservicio.atmdeposit.models.repository.AtmRepository;
+
+import io.reactivex.Single;
+
+public class AtmServiceImpl implements AtmService {
+
+	private final String urlPerson = "http://localhost:8088/";
+	
+	//INSTANCIA DE RETROFIT
+	UtilRetrofit retrofitPerson = new UtilRetrofit(urlPerson);
+	//ENLAZO RETROFIT CON LA INTERFACE
+	AtmServiceRetrofit connectPerson = retrofitPerson
+			.getRetrofit()
+			.create(AtmServiceRetrofit.class);
+	
+	@Override
+	public Single<Object> obtenerPersona(final String documentNumber) {
+		return connectPerson.findPersonByDocumento(documentNumber);
+	}
+	
+	
+
+	
+	
+}

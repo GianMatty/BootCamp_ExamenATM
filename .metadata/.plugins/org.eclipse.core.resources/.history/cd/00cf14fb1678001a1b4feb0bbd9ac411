@@ -1,0 +1,17 @@
+package com.matias.microservicio.account.services;
+
+import java.util.Optional;
+
+import com.matias.microservicio.account.models.repository.PersonRepository;
+import com.matias.microservicios.common.models.entity.Person;
+
+public class PersonServiceImpl implements PersonService{
+
+	private PersonRepository personRepository;
+	
+	@Override
+	public Optional<Person> findById(Long id) {
+		return personRepository.findById(id);
+	}
+	
+}

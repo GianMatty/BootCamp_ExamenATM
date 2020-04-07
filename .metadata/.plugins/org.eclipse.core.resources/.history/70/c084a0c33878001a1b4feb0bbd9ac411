@@ -1,0 +1,5 @@
+package com.matias.microservicio.reniec.models.repository;
+
+public interface ReniecRepository {
+
+}

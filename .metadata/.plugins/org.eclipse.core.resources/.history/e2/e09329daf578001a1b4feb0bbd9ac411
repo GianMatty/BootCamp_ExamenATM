@@ -1,0 +1,22 @@
+package com.matias.microservicio.atmdeposit.services;
+
+import retrofit2.Retrofit;
+
+public class UtilRetrofit {
+	private Retrofit retrofit =null;
+
+	public UtilRetrofit(String baseUrl ) {
+		this.retrofit = new Retrofit
+				.Builder()
+				.baseUrl(baseUrl)
+				.addConverterFactory(GsonConverterFactory.create())
+				.build();
+	}
+
+	public Retrofit getRetrofit() {
+		return retrofit;
+	}
+
+	
+	
+}

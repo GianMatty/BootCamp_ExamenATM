@@ -1,0 +1,24 @@
+package com.matias.microservicio.atmdeposit.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.matias.microservicio.atmdeposit.services.AtmService;
+
+import io.reactivex.Single;
+
+@RestController
+@RequestMapping("/atm")
+public class AtmController {
+
+	@Autowired
+	private AtmService atmService;
+	
+	@PostMapping("deposits")
+	public Single<ResponseEntity<Object>> Depositar(){
+		return null;
+	}
+}

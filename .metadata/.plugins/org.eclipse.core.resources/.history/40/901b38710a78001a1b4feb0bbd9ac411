@@ -1,0 +1,9 @@
+package com.matias.microservicios.models.entity;
+
+
+@Ent
+@Table(name = "tbl_person")
+public class Person {
+	@Id
+	private Long id;
+}

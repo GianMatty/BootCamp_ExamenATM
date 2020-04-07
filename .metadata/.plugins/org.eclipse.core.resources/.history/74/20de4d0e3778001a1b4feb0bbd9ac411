@@ -1,0 +1,5 @@
+package com.matias.microservicio.fingerprint.models.repository;
+
+public interface fingerprintRepository {
+
+}

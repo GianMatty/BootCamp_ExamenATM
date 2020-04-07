@@ -1,0 +1,35 @@
+package com.matias.microservicio.card.services;
+
+import java.util.List;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.matias.microservicio.card.models.repository.CardRepository;
+import com.matias.microservicios.common.models.entity.Cards;
+
+import io.reactivex.Single;
+
+@Service
+public class CardServiceImpl implements CardService{
+
+	@Autowired
+	private CardRepository cardRepository;
+	
+	@Override
+	public Single<Object> bucarCards(String document) {
+		return Single.create(s -> {
+			Cards cards;
+			cards.ca
+			
+			
+			if(persons.isEmpty()) {
+				s.tryOnError(new EntityNotFoundException("Persona no encontrada"));
+			}else {
+				s.onSuccess(persons.get(0));
+			}
+		});
+	}
+}

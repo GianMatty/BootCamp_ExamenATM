@@ -1,0 +1,13 @@
+package com.matias.microservicio.atmdeposit.services;
+
+import io.reactivex.Single;
+import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.HTTP;
+
+public interface AtmServiceRetrofit {
+	@GET("core/persons")
+	@HTTP(method = "GET", path ="core/persons" , hasBody = true)
+	Single<Object> findPersonByDocumento(@Body String documentNumber);
+	
+}

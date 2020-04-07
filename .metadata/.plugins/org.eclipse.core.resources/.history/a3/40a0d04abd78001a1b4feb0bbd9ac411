@@ -1,0 +1,55 @@
+package com.matias.microservicios.common.models.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Data
+@Entity
+@Table(name = "tbl_person")
+public class Person {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private String document;
+	private boolean fingerprint;
+	private boolean blacklist;
+	
+	
+	
+	public Person() {
+		
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getDocument() {
+		return document;
+	}
+	public void setDocument(String document) {
+		this.document = document;
+	}
+	public boolean isFingerprint() {
+		return fingerprint;
+	}
+	public void setFingerprint(boolean fingerprint) {
+		this.fingerprint = fingerprint;
+	}
+	public boolean isBlacklist() {
+		return blacklist;
+	}
+	public void setBlacklist(boolean blacklist) {
+		this.blacklist = blacklist;
+	}
+	
+	
+	
+	
+}

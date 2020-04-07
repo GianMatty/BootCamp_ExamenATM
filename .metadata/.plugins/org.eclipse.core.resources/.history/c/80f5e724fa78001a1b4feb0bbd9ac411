@@ -1,0 +1,8 @@
+package com.matias.microservicio.atmdeposit.services;
+
+import io.reactivex.Observable;
+
+public interface AtmService {
+
+	public Observable<Object> obtenerPersonas(Long id);
+}

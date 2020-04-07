@@ -1,0 +1,7 @@
+package com.matias.microservicio.person.services;
+
+import io.reactivex.Single;
+
+public interface PersonService {
+	public Single<Object> findPersonByDocument(String document);
+}

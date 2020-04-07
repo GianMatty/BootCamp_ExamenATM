@@ -1,0 +1,12 @@
+package com.matias.microservicio.person.services;
+
+import java.util.Optional;
+
+import com.matias.microservicios.common.models.entity.Person;
+
+import io.reactivex.Single;
+
+public interface PersonService {
+
+	public Single<Object> findPersonByID(Long id);
+}

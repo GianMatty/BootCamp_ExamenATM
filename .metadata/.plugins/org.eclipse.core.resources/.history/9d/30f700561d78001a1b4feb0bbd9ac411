@@ -1,0 +1,20 @@
+package com.matias.microservicio.account.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.matias.microservicio.account.services.PersonService;
+
+@RestController
+public class PersonController {
+	@Autowired
+	private PersonService personService;
+	
+	@GetMapping("/persons")
+	public ResponseEntity<?> obtenerPersonas(){
+		return ResponseEntity.ok().body(personService.findPersons());
+	}
+}

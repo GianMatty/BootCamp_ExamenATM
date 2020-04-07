@@ -1,0 +1,10 @@
+package com.matias.microservicio.account.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.matias.microservicio.account.services.PersonService;
+
+public class PersonController {
+	@Autowired
+	private PersonService personService;
+}

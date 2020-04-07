@@ -1,0 +1,13 @@
+package com.matias.microservicio.fingerprint.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.matias.microservicio.fingerprint.models.repository.FingerprintRepository;
+
+@Service
+public class FingerprintServiceImpl implements FingerprintService{
+	
+	@Autowired
+	private FingerprintRepository fingerprintRepository;
+}

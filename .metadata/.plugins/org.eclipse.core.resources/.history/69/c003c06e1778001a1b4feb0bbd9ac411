@@ -1,0 +1,10 @@
+package com.matias.microservicio.account.services;
+
+import java.util.Optional;
+
+import com.matias.microservicios.common.models.entity.Person;
+
+public interface PersonService {
+
+	public Optional<Person> findById(Long id);
+}

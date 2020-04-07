@@ -1,0 +1,21 @@
+package com.matias.microservicio.account.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.matias.microservicio.person.models.repository.PersonRepository;
+import com.matias.microservicio.person.services.PersonService;
+import com.matias.microservicios.common.models.entity.Person;
+
+@Service
+public class PersonServiceImpl implements PersonService{
+
+	@Autowired
+	private PersonRepository personRepository;
+	
+	@Override
+	public Iterable<Person> findPersons() {
+		return personRepository.findAll();
+	}
+	
+}

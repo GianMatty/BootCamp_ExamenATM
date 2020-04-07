@@ -1,0 +1,16 @@
+PUERTOS DE CADA MICROSERVICIO:
+
+* AtmDeposito: puerto 8089
+* Person: puerto 8088
+* Account: puerto 8087
+* Card: puerto 8086
+* Reniec: puerto 8085
+* Fingerprint: puerto 8084
+
+BASE DE DATOS ENBEBIDA EN PERSONS:
+
+insert into tbl_person (blacklist, document, fingerprint) values(false, '10000000', true);
+insert into tbl_person (blacklist, document, fingerprint) values(false, '10000001', false);
+insert into tbl_person (blacklist,document, fingerprint) values(true, '10000002', true);
+
+select * from tbl_person

@@ -1,0 +1,46 @@
+package com.matias.microservicio.person.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.matias.microservicio.person.models.repository.PersonRepository;
+import com.matias.microservicios.common.models.entity.Person;
+
+import io.reactivex.Single;
+
+@Service
+public class PersonServiceImpl implements PersonService{
+
+	@Autowired
+	private PersonRepository personRepository;
+	
+	@Override
+	public Single<Object> findPersonById(Long id) {
+		return Single.create(s -> {
+			Optional<Person> persons = personRepository.findById(id);
+			if(!persons.isPresent()) {
+				s.tryOnError(new EntityNotFoundException("Persona no encontrada"));
+			}else {
+				s.onSuccess(persons.get());
+			}
+		});
+	}
+
+	@Override
+	public Single<Object> findPersonByDocument(String document) {
+		return Single.create(s -> {
+			Person persons = personRepository.FindByDocument(document);
+			if(persons == null) {
+				s.tryOnError(new EntityNotFoundException("Persona no encontrada"));
+			}else {
+				s.onSuccess(persons);
+			}
+		});
+	}
+	
+}

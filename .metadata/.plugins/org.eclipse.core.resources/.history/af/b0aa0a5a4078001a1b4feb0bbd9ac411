@@ -1,0 +1,14 @@
+package com.matias.microservicio.reniec.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.matias.microservicio.reniec.models.repository.ReniecRepository;
+
+@Service
+public class ReniecServiceImpl implements ReniecService{
+	@Autowired
+	private ReniecRepository reniecRepository;
+	
+	
+}
